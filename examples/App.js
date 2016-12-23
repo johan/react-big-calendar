@@ -15,6 +15,8 @@ import './prism.less';
 
 let demoRoot = 'https://github.com/intljusticemission/react-big-calendar/tree/master/examples/demos'
 
+let events = require('./demos/hai-events-2017.json');
+
 const Example = React.createClass({
   getInitialState(){
     return {
@@ -26,7 +28,7 @@ const Example = React.createClass({
     let selected = this.state.selected;
     let Current = {
       basic: require('./demos/basic'),
-      selectable: require('./demos/selectable'),
+      //selectable: require('./demos/selectable'),
       cultures: require('./demos/cultures'),
       popup: require('./demos/popup'),
       rendering: require('./demos/rendering'),
@@ -102,7 +104,7 @@ const Example = React.createClass({
 
   select(selected, e){
     e.preventDefault();
-    this.setState({ selected })
+    this.setState({ selected });
   }
 });
 
